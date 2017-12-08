@@ -17,7 +17,7 @@ public class Channel {
         while (byteRead != -1) {
             System.out.println("Read" + byteRead);
             byteBuffer.flip();
-            while (byteBuffer.remaining() == 0) {
+            while (byteBuffer.remaining() != 0) {
                 System.out.println(byteBuffer.get());
             }
             byteBuffer.clear();
